@@ -1,0 +1,9 @@
+name,degree,regulator_id,affiliations,years_experience,workplace,specialties,languages,fee_cents,is_free,timezone
+Dr. Aarav Mehta,"MBBS, MD",MCI-458721,"Apollo Hospital, Delhi",12,Apollo Hospital,General Medicine,English|Hindi,15000,FALSE,Asia/Kolkata
+Dr. Priya Sharma,MBBS,NMC-239845,"Fortis Hospital, Mumbai",8,Fortis Hospital,General Medicine,English|Marathi|Hindi,10000,TRUE,Asia/Kolkata
+Dr. Rohan Patel,"MBBS, MD",MCI-598321,AIIMS Delhi,15,AIIMS Delhi,General Medicine,English|Gujarati|Hindi,20000,FALSE,Asia/Kolkata
+Dr. Anjali Rao,"MBBS, MD",NMC-672134,"Manipal Hospital, Bangalore",10,Manipal Hospital,General Medicine,English|Kannada|Hindi,12000,TRUE,Asia/Kolkata
+Dr. Sarah Johnson,MBBS,GMC-874512,"St. Mary's Hospital, London",14,St. Mary's Hospital,General Medicine,English,25000,FALSE,Europe/London
+Dr. Oliver Smith,"MBBS, MRCP",GMC-458123,Guy's and St Thomas's NHS Foundation Trust,11,Guy's Hospital,General Medicine,English,23000,FALSE,Europe/London
+Dr. Kavita Nair,MBBS,NMC-908721,"Apollo Hospital, Chennai",9,Apollo Hospital,General Medicine,English|Tamil|Hindi,9000,TRUE,Asia/Kolkata
+Dr. David Brown,"MBBS, MRCP",GMC-652314,"Royal Free Hospital, London",18,Royal Free Hospital,General Medicine,English,28000,FALSE,Europe/London

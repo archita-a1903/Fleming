@@ -28,7 +28,7 @@ It supports both free and paid models, shows doctor experience and workplace, an
 - **Frontend:** React  
 - **Database:** PostgreSQL / Firestore  
 - **AI:** OpenAI or local LLM adapter  
-- **Payments:** Stripe (any another related to country specific)  
+- **Payments:** Stripe (any other related to country specific)  
 
 ---
 

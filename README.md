@@ -1,70 +1,44 @@
-# Fleming
-Fleming is an AI-driven medical assistant that provides safe, guideline-based health advice and connects users to licensed doctors for free or paid consultations, ensuring privacy, compliance, and reliable clinical guidance.
-# Fleming — Local SQLite MVP (FastAPI)
+# Fleming Health Chat
 
-This is a **local-only** MVP: triage endpoints (FEVER), doctor directory (CSV seed), and admin references.
+**Fleming Health Chat** is an AI-powered medical assistant that provides safe, guideline-based health advice and connects users to licensed doctors for professional consultations.  
+It supports both free and paid models, shows doctor experience and workplace, and ensures safety through red-flag detection, emergency escalation, and clinical-grade compliance.
 
-## Prereqs
-- Python 3.10+
+---
 
-## Setup
-```bash
-cd /mnt/data/fleming_backend
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
+## ✨ Features
+- AI-driven medical triage and guideline-based advice  
+- Connect with verified doctors (free or paid)  
+- Shows doctor experience, workplace, and specialties  
+- Built-in red-flag detection and emergency alerts  
+- Privacy-first and HIPAA/GDPR-aligned  
+- Modular architecture (FastAPI/Node.js backend + React frontend)
 
-## Seed doctors
-```bash
-python seed_doctors.py
-```
+---
 
-## Run API
-```bash
-uvicorn app.main:app --reload --port 8000
-```
+## 🧠 How It Works
+1. Users describe symptoms through chat.  
+2. The system analyzes inputs using medical guideline flows (ICMR, AIIMS, NICE, WHO).  
+3. If risk is detected, the system escalates to a licensed doctor or provides self-care guidance.  
+4. Payments and appointments are handled securely (Stripe supported).  
 
-## Test endpoints
+---
 
-### Health
-```bash
-curl http://127.0.0.1:8000/health
-```
+## ⚙️ Tech Stack
+- **Backend:** FastAPI / Node.js  
+- **Frontend:** React  
+- **Database:** PostgreSQL / Firestore  
+- **AI:** OpenAI or local LLM adapter  
+- **Payments:** Stripe (any another related to country specific)  
 
-### Start triage (fever)
-```bash
-curl -X POST http://127.0.0.1:8000/triage/start -H "Content-Type: application/json" -d '{"complaint":"fever"}'
-```
+---
 
-### Answer step
-Replace TRIAGE_ID with the value you got from /start.
-```bash
-curl -X POST http://127.0.0.1:8000/triage/answer -H "Content-Type: application/json" -d '{"triage_id":"TRIAGE_ID","answer":"no"}'
-```
+## 🩺 Disclaimer
+> This application provides general health information for educational purposes only.  
+> It is **not** intended to diagnose, treat, cure, or prevent any disease.  
+> Always seek advice from a qualified healthcare professional.  
+> The authors and contributors are not liable for any outcomes resulting from its use.
 
-### Finish triage (generates PDF)
-```bash
-curl -X POST http://127.0.0.1:8000/triage/finish -H "Content-Type: application/json" -d '{"triage_id":"TRIAGE_ID"}'
-# PDF saved in ./summaries/<encounter_id>.pdf
-```
+---
 
-### List doctors
-```bash
-curl "http://127.0.0.1:8000/doctors"
-curl "http://127.0.0.1:8000/doctors?is_free=true"
-```
-
-### Admin: add fever references (ICMR/AIIMS)
-```bash
-curl -X POST http://127.0.0.1:8000/admin/references -H "Content-Type: application/json" -d '{
-  "complaint": "fever",
-  "source": "ICMR/AIIMS",
-  "version": "2024",
-  "body": "ICMR/AIIMS fever assessment summary (placeholder)."
-}'
-```
-
-### Admin: list references
-```bash
-curl "http://127.0.0.1:8000/admin/references?complaint=fever"
-```
+## 📜 License
+Released under the **MIT License**.  
